@@ -1,0 +1,121 @@
+<!--範例1：網頁框架-->
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>DApp_IFNFT</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png" />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/css/adminlte.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/css/OverlayScrollbars.min.css" />
+    </head>
+
+    <body class="sidebar-mini layout-fixed">
+        <div class="wrapper">
+            <div class="preloader flex-column justify-content-center align-items-center">
+                <img class="animation__shake" src="images/favicon.png" alt="DApp_IFNFT" height="60" width="60" />
+            </div>
+
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <a href="index_1.html" class="brand-link">
+                    <img src="images/favicon.png" alt="DApp_寵物" class="brand-image img-circle elevation-3" style="opacity: 0.8" />
+                    <span class="brand-text font-weight-light">DApp_寵物</span>
+                </a>
+                <div class="sidebar">
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                            <li class="nav-item">
+                                <a href="index_1.html" class="nav-link active">
+                                    <i class="nav-icon fas fa-file-alt"></i>
+                                    <p>網頁框架</p>
+                                </a>
+                            </li>
+                           
+                            <li class="nav-item">
+                                <a href="index_4.html" class="nav-link">
+                                    <i class="nav-icon fas fa-file-contract"></i>
+                                    <p>合約互動</p>
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a href="index_6.html" class="nav-link">
+                                    <i class="nav-icon fas fa-images"></i>
+                                    <p>取得NFT Image</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+
+            <div class="content-wrapper">
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-12">
+                                <h1 class="m-0">範例1：網頁框架</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h3 class="card-title">合約</h3>
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <strong>位址</strong>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="contract_account" value=“0x8829d244b5D59C224D85308a589F4626F0d5B3Cf” />
+                                            <div class="input-group-append">
+                                                <button type="button" class="btn btn-danger" id="contract_link_btn">連結</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="main-footer"></footer>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/js/adminlte.min.js"></script>
+
+        <script>
+            $("#contract_link_btn").click(function () {
+                console.log("按下contract_link_btn");
+                var ca = $("#contract_account").val();
+                console.log(ca);
+                alert(ca);
+            });
+        </script>
+    </body>
+</html>
